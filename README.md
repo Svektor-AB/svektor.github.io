@@ -1,6 +1,6 @@
 # svektor.se
 
-Företagswebbplats för **Svektor AB** — ett svenskt apputvecklingsbolag.
+Webbplats för **Svektor AB** — ett litet, oberoende bolag som bygger små appar.
 
 Statisk sida som publiceras via GitHub Pages på <https://svektor.se> (se `CNAME`).
 
