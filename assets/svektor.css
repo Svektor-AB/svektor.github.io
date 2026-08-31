@@ -201,6 +201,10 @@ section.alt { background: var(--navy-alt); border-block: 1px solid var(--line); 
 }
 .callout p { margin: 0; color: var(--text); }
 
+/* ---------- Plain contact block ---------- */
+.contact-plain { font-size: 1.02rem; line-height: 2; margin: 0; }
+.contact-plain.muted { color: var(--text-dim); font-size: .9rem; margin-top: 10px; }
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--navy-dark);
