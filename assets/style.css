@@ -1,0 +1,253 @@
+/* Svektor AB — company site
+   Graphic profile shared with the apps:
+   navy #002B5C, signal yellow #F5C400, off-white #F4F6F9, hairline #E8ECF0 */
+
+:root {
+  --navy: #002B5C;
+  --navy-deep: #001B3C;
+  --yellow: #F5C400;
+  --ink: #1A2431;
+  --muted: #55606E;
+  --bg: #F4F6F9;
+  --card: #FFFFFF;
+  --line: #E8ECF0;
+  --radius: 12px;
+  --maxw: 1000px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: var(--navy);
+  margin: 0 0 .5em;
+}
+
+h1 { font-size: clamp(1.9rem, 4.5vw, 3rem); }
+h2 { font-size: clamp(1.35rem, 2.8vw, 1.9rem); }
+h3 { font-size: 1.05rem; }
+
+p { margin: 0 0 1rem; }
+
+a { color: var(--navy); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: #003c82; }
+
+:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+.eyebrow {
+  display: inline-block;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #7a6300;
+  margin-bottom: .9rem;
+}
+.hero .eyebrow { color: var(--yellow); }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--navy);
+  border-bottom: 3px solid var(--yellow);
+}
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+  flex-wrap: wrap;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.brand-mark { width: 32px; height: 32px; display: block; border-radius: 8px; }
+.brand-name {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 3px;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.site-nav a {
+  color: #dfe7f2;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .95rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.site-nav a:hover { color: #fff; background: rgba(255,255,255,.08); }
+.site-nav a[aria-current="page"] { color: var(--yellow); }
+.site-nav a.lang {
+  border: 1px solid rgba(255,255,255,.25);
+  letter-spacing: 1px;
+  font-size: .8rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--navy);
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,.25)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cpath d='M4 2l18 20L4 42' fill='none' stroke='%23ffffff' stroke-opacity='0.05' stroke-width='3'/%3E%3C/svg%3E");
+  color: #eaf1fb;
+  padding: 72px 0 80px;
+}
+.hero h1 { color: #fff; max-width: 16ch; }
+.hero h1 .accent { color: var(--yellow); }
+.hero p {
+  font-size: 1.12rem;
+  color: #c6d4e8;
+  max-width: 60ch;
+}
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.btn {
+  display: inline-block;
+  padding: 13px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: .98rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+.btn-primary { background: var(--yellow); color: var(--navy-deep); }
+.btn-primary:hover { background: #ffd21f; color: var(--navy-deep); }
+.btn-ghost { border-color: rgba(255,255,255,.4); color: #fff; }
+.btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); color: #fff; }
+
+/* ---------- Sections ---------- */
+section { padding: 56px 0; }
+section.tint { background: #fff; border-block: 1px solid var(--line); }
+.section-lead { max-width: 62ch; color: var(--muted); }
+
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 32px;
+}
+.grid.two { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 620px) { .grid.two { grid-template-columns: 1fr; } }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+section.tint .card { background: var(--bg); }
+.card h3 { margin-bottom: .4rem; }
+.card p { color: var(--muted); margin: 0; font-size: .96rem; }
+.card .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px; height: 34px;
+  border-radius: 8px;
+  background: var(--navy);
+  color: var(--yellow);
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+/* ---------- Contact ---------- */
+.contact-box {
+  background: var(--navy);
+  color: #eaf1fb;
+  border-radius: var(--radius);
+  padding: 36px;
+  margin-top: 28px;
+}
+.contact-box h2 { color: #fff; }
+.contact-box a { color: var(--yellow); font-weight: 700; }
+.contact-list { display: grid; gap: 14px; margin-top: 18px; }
+.contact-list div { font-size: 1.02rem; }
+.contact-list span { display: block; font-size: .8rem; letter-spacing: 1.2px; text-transform: uppercase; color: #9db4d4; }
+
+/* ---------- Prose (support / privacy) ---------- */
+.prose { max-width: 74ch; }
+.prose h2 { margin-top: 2.2rem; }
+.prose h3 { margin-top: 1.6rem; color: var(--ink); }
+.prose ul { padding-left: 1.2rem; }
+.prose li { margin-bottom: .4rem; }
+.prose .updated {
+  font-size: .9rem;
+  color: var(--muted);
+  border-left: 3px solid var(--yellow);
+  padding-left: 12px;
+}
+.callout {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--yellow);
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin: 1.5rem 0;
+}
+.callout p { margin: 0; color: var(--muted); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--navy-deep);
+  color: #a9bcd6;
+  padding: 34px 0;
+  font-size: .9rem;
+}
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-footer a { color: #d5e1f2; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+.site-footer nav { display: flex; gap: 18px; flex-wrap: wrap; }
+
+@media (max-width: 560px) {
+  .brand-name { letter-spacing: 2px; font-size: 1.05rem; }
+  section { padding: 44px 0; }
+  .hero { padding: 56px 0 60px; }
+  .contact-box, .card { padding: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
