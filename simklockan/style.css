@@ -1,0 +1,67 @@
+/* Swim Coach Timer / Simklockan — pages for svektor.se.
+   Self-contained on purpose: no web fonts, no scripts, no analytics, no
+   cookies, nothing fetched from third parties — the same promise the app makes. */
+:root {
+  --navy: #002b5c;
+  --yellow: #f5c400;
+  --bg: #f4f6f9;
+  --card: #ffffff;
+  --text: #1b1f24;
+  --muted: #5a6572;
+  --line: #dde3ea;
+  --link: #0a4c9a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1116;
+    --card: #131b23;
+    --text: #e8edf2;
+    --muted: #9aa7b5;
+    --line: #26323d;
+    --link: #8ab8f5;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+header.site {
+  background: var(--navy);
+  color: #fff;
+  padding: 28px 20px;
+}
+header.site .inner, main, footer.site { max-width: 760px; margin: 0 auto; }
+header.site h1 { margin: 0; font-size: 1.6rem; color: var(--yellow); letter-spacing: .02em; }
+header.site p { margin: 6px 0 0; color: #cfd8e3; }
+main { padding: 24px 20px 40px; }
+h2 { margin: 2rem 0 .5rem; font-size: 1.25rem; color: var(--navy); }
+@media (prefers-color-scheme: dark) { h2 { color: var(--yellow); } }
+h3 { margin: 1.25rem 0 .25rem; font-size: 1.05rem; }
+p, li { max-width: 68ch; }
+a { color: var(--link); }
+a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; }
+.summary {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--yellow);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 8px 0 8px;
+}
+.summary ul { margin: .4rem 0 0; padding-left: 1.2rem; }
+.meta { color: var(--muted); font-size: .9rem; }
+.lang { float: right; font-size: .95rem; }
+table { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; background: var(--card); }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; font-size: .95rem; }
+th { background: rgba(0, 43, 92, .08); }
+footer.site { padding: 20px; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); }
+.buttons { display: flex; flex-wrap: wrap; gap: 12px; margin: 1rem 0; }
+.btn {
+  display: inline-block; padding: 12px 18px; border-radius: 10px; text-decoration: none; font-weight: 600;
+  background: var(--navy); color: var(--yellow);
+}
+.btn.secondary { background: transparent; color: var(--link); border: 2px solid var(--line); }
