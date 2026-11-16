@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integritetspolicy — Glosor · Svektor AB</title>
+<meta name="description" content="Integritetspolicy för Glosor av Svektor AB. All glosdata lagras lokalt på din enhet. Vi samlar inte in personuppgifter.">
+<link rel="canonical" href="https://svektor.se/glosor/integritetspolicy/">
+<link rel="icon" href="/svektor-icon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="sv" href="https://svektor.se/glosor/integritetspolicy/">
+<link rel="alternate" hreflang="en" href="https://svektor.se/glosor/privacy/">
+<link rel="stylesheet" href="/assets/svektor.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/glosor/" aria-label="Glosor av Svektor AB">
+      <img class="brand-mark" src="/svektor-icon.svg" alt="" width="30" height="30">
+      <span class="brand-name">SVEKTOR</span>
+    </a>
+    <nav class="site-nav" aria-label="Huvudmeny">
+      <a href="/glosor/">Glosor</a>
+      <a class="lang" href="/glosor/privacy/" hreflang="en">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding:52px 0">
+    <div class="wrap">
+      <span class="eyebrow">Glosor</span>
+      <h1>Integritetspolicy</h1>
+      <p>Kortversion: Glosor lagrar din glosdata bara på din enhet. Svektor AB ser den aldrig.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap prose">
+      <p class="updated">Senast uppdaterad: 16 november 2026 · Gäller Glosor version 1.0 och senare</p>
+
+      <div class="callout">
+        <p><strong>Sammanfattning.</strong> Inget konto. Ingen server. Dina gloslistor, studiehistorik och inställningar lagras helt på din enhet. Det enda Svektor AB kan ta emot är en frivillig anonym kraschrapport (opt-in) och e-post du själv väljer att skicka oss.</p>
+      </div>
+
+      <h2>1. Personuppgiftsansvarig</h2>
+      <p>
+        Svektor AB, Sverige, org.nr 559594-3498.<br>
+        Kontakt i integritetsfrågor: <a href="mailto:info@svektor.se">info@svektor.se</a>
+      </p>
+
+      <h2>2. Vad appen lagrar — bara på din enhet</h2>
+      <p>Glosor lagrar följande data lokalt på din enhet. Svektor AB har aldrig tillgång till den.</p>
+      <ul>
+        <li><strong>Gloslistor</strong> — ord, översättningar, kategorier och anteckningar som du skapar eller importerar.</li>
+        <li><strong>Studiehistorik</strong> — sessionsdatum, resultat och per-glosa-prestation som används för att vikta kommande övningar.</li>
+        <li><strong>Inställningar och preferenser</strong> — språk, aviseringsschema, AI-tjänstens URL (men aldrig din API-nyckel — se avsnitt 5).</li>
+        <li><strong>Provperiod- och köpstatus</strong> — hanteras av Apples StoreKit på enheten. Vi tar aldrig emot dina betaluppgifter.</li>
+      </ul>
+
+      <h2>3. Ingen internetanslutning som standard</h2>
+      <p>
+        Glosor fungerar helt offline. Appen gör inga nätverksförfrågningar på egen hand. De enda anslutningar appen initierar är de två valfria funktionerna som beskrivs i avsnitt 4 och 5.
+      </p>
+
+      <h2>4. Enhetsbehörigheter</h2>
+      <ul>
+        <li>
+          <strong>Kamera och fotobibliotek.</strong> Används om du väljer att importera glosor genom att fotografera en bok eller tavla. Textigenkänning körs helt på din enhet med Apples Vision-ramverk. Ingen bild eller text skickas till Svektor AB.
+        </li>
+        <li>
+          <strong>Mikrofon.</strong> Används om du väljer att öva med röstinmatning. Taligenkänning sker på enheten. Inget ljud spelas in eller skickas till Svektor AB.
+        </li>
+        <li>
+          <strong>Lokala aviseringar.</strong> Används för frivilliga dagliga studiepåminnelser och streakaviseringar. Dessa innehåller inga personuppgifter och lämnar inte din enhet.
+        </li>
+      </ul>
+      <p>Alla behörigheter begärs bara första gången du försöker använda den berörda funktionen och kan återkallas när som helst under iOS-inställningar.</p>
+
+      <h2>5. AI-import — din egen API-nyckel, din egen tjänst</h2>
+      <p>
+        Glosor kan valfritt ansluta till en AI-tjänst (t.ex. Google Gemini eller OpenAI) för att tolka inklistrad läxtext. Funktionen fungerar så här:
+      </p>
+      <ul>
+        <li>Du anger URL och API-nyckel för den AI-tjänst du valt. Nyckeln lagras bara i din enhets nyckelring — Svektor AB tar aldrig emot den.</li>
+        <li>När du använder AI-importen skickar appen glosatexten <strong>direkt från din enhet till den AI-tjänst du konfigurerat</strong>. Den passerar ingen server som drivs av Svektor AB.</li>
+        <li>Den dataöverföringen regleras av integritetspolicyn för den AI-tjänst du valt, inte av den här policyn.</li>
+      </ul>
+
+      <h2>6. Frivillig kraschrapportering</h2>
+      <p>
+        Appen innehåller Sentry för kraschrapportering. Det är <strong>avstängt som standard</strong> och aktiveras bara om du uttryckligen väljer att delta via Inställningar → Kraschrapportering. Om du väljer att delta:
+      </p>
+      <ul>
+        <li>Anonym teknisk information om kraschen (stackspår, enhetsmodell, iOS-version, appversion) skickas till Sentry, Inc., USA.</li>
+        <li>Inget glosinnehåll, ingen studiedata och inga identifierande uppgifter ingår i kraschrapporterna.</li>
+        <li>Du kan stänga av det när som helst under Inställningar. Rapporter som redan skickats kan inte återkallas.</li>
+        <li>Sentrys integritetspolicy finns på <a href="https://sentry.io/privacy/">sentry.io/privacy</a>.</li>
+      </ul>
+
+      <h2>7. Köp i appen — hanteras av Apple</h2>
+      <p>
+        Glosor erbjuder en gratis provperiod på 60 dagar följt av ett engångsköp på ungefär 29 kr. All betalningshantering, fakturering och köphistorik hanteras av Apple och regleras av Apples integritetspolicy. Svektor AB tar inte emot dina betaluppgifter.
+      </p>
+      <p>För att begära återbetalning besöker du <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+      <h2>8. Dataexport och säkerhetskopiering</h2>
+      <p>
+        Du kan exportera en säkerhetskopia av dina glosdata inifrån appen. Den exporterade filen är inte krypterad. Du ansvarar för att förvara den säkert. Appen skickar den inte automatiskt någonstans.
+      </p>
+      <p>
+        Dina data kan också ingå i din iOS-enhets säkerhetskopia (iCloud eller lokal). Den säkerhetskopian hanteras av Apple enligt Apples villkor.
+      </p>
+
+      <h2>9. Vad Svektor AB tar emot</h2>
+      <p>Enbart det du väljer att skicka:</p>
+      <ul>
+        <li><strong>E-post till support@svektor.se eller info@svektor.se.</strong> Vi ser din e-postadress och ditt meddelande. Vi använder det för att hjälpa dig och sparar det bara tills ärendet är avslutat.</li>
+        <li><strong>Aggregerad App Store-statistik.</strong> Apple ger oss nedladdningsantal och aggregerade kraschistatistik. Dessa kan inte identifiera enskilda användare.</li>
+        <li><strong>Kraschrapporter via Sentry</strong> — enbart om du har valt att delta (se avsnitt 6).</li>
+      </ul>
+
+      <h2>10. Barn</h2>
+      <p>
+        Glosor samlar inte in personuppgifter, vilket gör appen lämplig för studenter i alla åldrar. Det glosinnehåll du anger är inte synligt för Svektor AB. Ingen åldersverifiering krävs.
+      </p>
+
+      <h2>11. Dina rättigheter enligt GDPR</h2>
+      <p>
+        Eftersom Svektor AB normalt inte innehar några personuppgifter om dig finns det oftast ingenting att lämna ut. För e-postkorrespondens du skickat kan du begära radering genom att skriva till <a href="mailto:info@svektor.se">info@svektor.se</a>. Du har rätt att lämna klagomål till <a href="https://www.imy.se/">Integritetsskyddsmyndigheten (IMY)</a>.
+      </p>
+
+      <h2>12. Ändringar</h2>
+      <p>
+        Om appen introducerar en funktion som förändrar hur data hanteras — till exempel anslutning till en Svektor-driven server — uppdateras den här sidan först och appens releasenotes beskriver förändringen.
+      </p>
+
+      <h2>13. Kontakt</h2>
+      <p>Svektor AB · <a href="mailto:info@svektor.se">info@svektor.se</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Svektor AB</span>
+    <nav aria-label="Sidfot">
+      <a href="/glosor/">Glosor</a>
+      <a href="/glosor/support/">Support</a>
+      <a href="/integritet.html">Svektor integritet</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
